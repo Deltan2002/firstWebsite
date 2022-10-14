@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./logo-removebg-preview.png" />
+    <title>Login | ನುಡಿಗನ್ನಡ</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            LOG IN
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            SIGN UP
+          </button>
+        </div>
+        <div class="social-icons">
+          <img src="./login-reg-img/fb.png" />
+          <img src="./login-reg-img/gp.png" />
+          <img src="./login-reg-img/tw.png" />
+        </div>
+
+        <form id="login" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Username"
+            name="name"
+            required
+          />
+
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit" class="login-btn">LOG IN</button>
+          <p class="last">WELCOME AGAIN!</p>
+        </form>
+
+        <!-- SIGNUP -->
+
+        <form id="register" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Username"
+            required
+          />
+
+          <input
+            type="email"
+            class="input-field"
+            placeholder="Email"
+            required
+          />
+
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            minlength="8"
+            required
+          />
+
+          <p>
+            Male
+            <input type="radio" name="gender" id="male" required />
+            Female
+            <input type="radio" name="gender" id="female" required />
+          </p>
+
+          <button type="submit" class="submit-btn">SIGN UP</button>
+          <a class="link" id="login" onclick="login()"
+            >Have an account?Log in</a
+          >
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px ";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      }
+    </script>
+  </body>
+</html>
